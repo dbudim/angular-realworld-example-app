@@ -12,11 +12,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: oven-sh/setup-bun@v2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
 
-      - run: bun install
+      - run: npm ci
 
-      - run: bun run build
+      - run: npm run build
 
       - name: Zip build
         run: cd dist/angular-conduit/browser && zip -r ../../../build.zip .

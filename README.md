@@ -12,18 +12,18 @@ A global documentation for the project is available at [docs.realworld.show](htt
 
 # Getting started
 
-Requires [Bun](https://bun.sh/docs/installation).
+Requires [Node.js](https://nodejs.org/) >= 20.11.1.
 
 ```bash
 git clone https://github.com/realworld-apps/angular-realworld-example-app.git
 cd angular-realworld-example-app
-bun install
-bun run start
+npm install
+npm start
 ```
 
 ### Building the project
 
-Run `bun run build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ## Functionality overview
 

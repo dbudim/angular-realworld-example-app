@@ -3,16 +3,16 @@
 ## Commands
 
 ```bash
-bun install            # Install deps (run after clone)
-bun run start          # Dev server at localhost:4200
-bun run test:e2e       # E2E tests (Playwright)
-bun run format         # Format code with Prettier
-bun run format:check   # Check formatting without writing
+npm install             # Install deps (run after clone)
+npm start               # Dev server at localhost:4200
+npm run test:e2e        # E2E tests (Playwright)
+npm run format          # Format code with Prettier
+npm run format:check    # Check formatting without writing
 ```
 
 ## Code Style
 
-- Run `bun run format` before presenting code to the user.
+- Run `npm run format` before presenting code to the user.
 
 ## Debug Interface
 
