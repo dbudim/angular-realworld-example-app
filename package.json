@@ -13,7 +13,7 @@
     "test:e2e:report": "playwright show-report",
     "format": "prettier --write \"**/*.{ts,html,css,json,md}\"",
     "format:check": "prettier --check \"**/*.{ts,html,css,json,md}\"",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "engines": {
     "node": ">=20.11.1"
@@ -40,6 +40,7 @@
     "@angular/compiler-cli": "21.2.12",
     "@playwright/test": "^1.58.0",
     "@types/marked": "^6.0.0",
+    "@types/node": "^20.19.43",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
     "playwright": "^1.58.0",
