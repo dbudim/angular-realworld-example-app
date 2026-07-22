@@ -1,21 +1,36 @@
-import { defineConfig } from '@playwright/test';
-import { baseConfig } from './realworld/specs/e2e/playwright.base';
+import { defineConfig, devices } from '@playwright/test';
 
-/**
- * Angular-specific Playwright configuration.
- * Extends the shared RealWorld base config with the Angular dev server.
- */
 export default defineConfig({
-  ...baseConfig,
-  testDir: './realworld/specs/e2e',
+  testDir: './e2e',
+  fullyParallel: false,
+  forbidOnly: !!process.env.CI,
+  retries: process.env.CI ? 2 : 1,
+  workers: 1,
+  reporter: 'html',
+
+  timeout: 15_000,
 
   use: {
-    ...baseConfig.use,
     baseURL: 'http://localhost:4200',
+    trace: 'on-first-retry',
+    screenshot: 'only-on-failure',
+    actionTimeout: 5_000,
+    navigationTimeout: 10_000,
   },
 
+  expect: {
+    timeout: 5_000,
+  },
+
+  projects: [
+    {
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
+    },
+  ],
+
   webServer: {
-    command: 'npm run start',
+    command: 'bun run start',
     url: 'http://localhost:4200',
     reuseExistingServer: !process.env.CI,
     timeout: 120_000,

@@ -17,11 +17,9 @@ Requires [Bun](https://bun.sh/docs/installation).
 ```bash
 git clone https://github.com/realworld-apps/angular-realworld-example-app.git
 cd angular-realworld-example-app
-bun run setup  # Init submodules + install dependencies
+bun install
 bun run start
 ```
-
-Run `bun run setup` again after a `git pull` that updates the `realworld` submodule.
 
 ### Building the project
 

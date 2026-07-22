@@ -21,18 +21,14 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              {
-                "glob": "*.svg",
-                "input": "realworld/assets/media",
-                "output": "/assets"
-              },
+              "src/assets",
               {
                 "glob": "_redirects",
                 "input": "src",
                 "output": "/"
               }
             ],
-            "styles": ["realworld/assets/theme/styles.css"],
+            "styles": ["src/styles.css"],
             "scripts": [],
             "browser": "src/main.ts"
           },
